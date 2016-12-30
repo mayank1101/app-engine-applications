@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rot13</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="container">
+        <h1 class="text-primary text-center">ROT 13</h1>
+        <div class="container">
+            <div class="jumbotron">
+            <p class="lead text-danger">ROT13 (<b>"rotate by 13 places"</b>, sometimes hyphenated ROT-13) is a simple letter
+            substitution cipher that replaces a letter with the letter 13 letters after it in the alphabet.
+                ROT13 is a special case of the Caesar cipher, developed in ancient Rome.</p>
+            </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center"><h2 class="text-center">Welcome to Rot13 Project</h2></div>
+            <div class="panel-body">
+            <form method="post">
+                <div class="form-group">
+                    <h3 class="text-primary text-center">Encrypt your data</h3>
+                    <textarea class="form-control" rows="4" name="data_enc"
+                              placeholder="Enter your text here for Encryption!">{{enc_data}}</textarea><br>
+                    <button class="btn btn-primary btn-lg" name="submit" value="e">Encrypt</button>
+                    <br>
+                    <h3 class="text-primary text-center">Decrypt your data</h3>
+                    <textarea class="form-control" rows="4" name="data_dec"
+                              placeholder="Enter your text here for decryption!">{{dec_data}}</textarea><br>
+                    <button type="submit" class="btn btn-danger btn-lg" name="submit" value="d">Decrypt</button>
+                </div>
+            </form>
+            </div>
+        </div>
+            <div class="container">
+                <h3 class="text-info">Some more info</h3>
+                <p class="lead">ROT13 is used in online forums as a means of hiding spoilers, punchlines,
+                puzzle solutions, and offensive materials from the casual glance. ROT13 has been described as the
+                "Usenet equivalent of a magazine printing the answer to a quiz upside down".ROT13 has inspired a
+                variety of letter and word games on-line, and is frequently mentioned in newsgroup conversations.</p>
+                <p class="lead"><b>For more information you can visit this wikipedia page</b>
+                <a class="btn btn-success" href="https://en.wikipedia.org/wiki/ROT13" role="button" target="_blank">ROT13 Wiki</a></p>
+            </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>

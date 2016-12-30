@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ASCII ART</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="container">
+        <h1 class="text-primary text-center">ASCII ART PROJECT</h1>
+        <div class="row">
+            <p class="lead"><b>ASCII art</b> is a graphic design technique that uses computers for presentation
+                and consists of pictures pieced together from the 95 printable (from a total of 128)
+                characters defined by the ASCII Standard from 1963 and ASCII compliant character sets
+                with proprietary extended characters (beyond the 128 characters of standard 7-bit ASCII)</p>
+            <p class="lead"><b>For more information you can visit this wikipedia page</b>
+                <a class="btn btn-success" href="https://en.wikipedia.org/wiki/ASCII_art" role="button" target="_blank">ASCII Art Wiki</a></p>
+        </div>
+        <div style="margin-top: 10em; margin-bottom: 10em;" class="panel panel-primary">
+            <div class="panel-heading">
+                <h1 class="text-center">ASCII Art Project</h1>
+            </div>
+                <div class="panel-body">
+                    <form method="post">
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Enter ASCII Title here"
+                                   name="title" value="{{title}}" required><br>
+                            <textarea class="form-control" rows="10" name="art"
+                                      placeholder="You can copy your ASCII Art here!" required>{{art}}</textarea><br>
+                            <button class="btn btn-primary" type="submit" name="sub">Submit</button><br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        <br>
+        <br>
+        <hr><br><br>
+        <div class="row">
+            <h1 class="text-primary text-center">ASCII Arts</h1>
+            <table>
+                <tbody>
+                {% for art in arts %}
+                <tr class="row">
+                    <td class="col-xs-4 col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="text-center">{{art.title}}</h3>
+                        </div>
+                        <div class="panel-body">
+                            <pre>{{art.art}}</pre>
+                        </div>
+                    </div>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
